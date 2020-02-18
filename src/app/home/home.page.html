@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Age Calculator <span><img src="assets/icon/ac.png" class="head-img"></span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="grad">
+ 
+  <div class="center text-center">
+    <h3>Select Date Below</h3>
+    <ion-item lines="none">
+      <ion-label>Date of Birth:</ion-label>
+      <ion-datetime class="pr-6" pickerFormat="D/M/YYYY" [(ngModel)]="myDate" ></ion-datetime> <span><img src="assets/icon/calendar.png" class="cal-img"></span>
+    </ion-item>
+    <!-- to -->
+
+
+    <ion-item class="text-center" lines="none">
+    <button ion-button (click)="birthdayData()" class="btn">Calculate Age</button>
+  </ion-item>
+  </div>
+  <div *ngIf="days>=0">
+    <span class="result">{{years}} years {{months}} months & {{days}} days old</span>
+  </div>
+  <div class="lc-img">
+      <img src="assets/icon/lifecycle.png" >
+    </div>
+</ion-content>
